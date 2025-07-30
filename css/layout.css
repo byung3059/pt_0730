@@ -1,0 +1,146 @@
+:root {
+    --pri-color: #9b0000;
+    --body-color: #ffffff;
+    --black-back-color: #050505;
+    --transition-1s: 0.75s;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+@media (max-width: 1202px) {
+    html {
+        font-size: 0.8319467554vw;
+    }
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 1.30208333333vw;
+    }
+}
+
+@media (max-width: 480px) {
+    html {
+        font-size: 2.17391304348vw;
+    }
+}
+
+body {
+    font-size: 1.6rem;
+    color: var(--body-color);
+    word-break: keep-all;
+    height: auto;
+    overflow-x: hidden;
+    background: var(--black-back-color);
+}
+
+.point {
+    /* font-weight: 700; */
+    color: var(--pri-color);
+}
+
+.inner {
+    max-width: 141rem;
+    margin: 0 auto;
+    padding: 8rem 0;
+    height: 100%;
+}
+
+.section {
+    height: 100vh;
+    background: var(--black-back-color);
+    overflow: hidden;
+}
+
+.section .tit p {
+    text-align: center;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    font-weight: 300;
+    overflow: hidden;
+    opacity: 0.8;
+}
+
+.section .tit h2 {
+    margin: 0 0 2.4rem 0;
+    text-align: center;
+    font-size: 6.4rem;
+    line-height: 7.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-family: 'Unbounded';
+    overflow: hidden;
+}
+
+
+.section .tit p span {
+    display: inline-block;
+    transform: translate(0, 100%);
+    transition: var(--transition-1s);
+}
+
+.section .tit h2 span {
+    display: inline-block;
+    transform: translate(0, 100%);
+    transition: var(--transition-1s);
+}
+
+.section.on .tit p span {
+    transform: translate(0, 0);
+    transition: var(--transition-1s);
+}
+
+.section.on .tit h2 span {
+    transform: translate(0, 0);
+    transition: var(--transition-1s);
+}
+
+.sec_tit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.mouse-default {
+    z-index: 99999;
+    position: fixed;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    pointer-events: none;
+    background: var(--pri-color);
+}
+
+.br_480 {
+    display: none;
+}
+
+@media(max-width: 768px) {
+    section {
+        padding: 0 16px;
+    }
+
+    .section .tit h2 {
+        font-size: 5.6rem;
+        line-height: 6.4rem;
+    }
+}
+
+@media(max-width: 480px) {
+    .br_480 {
+        display: block;
+    }
+
+    .section .tit h2 {
+        font-size: 4.4rem;
+        line-height: 5.2rem;
+    }
+
+
+    .section .tit p {
+        display: none;
+    }
+}
