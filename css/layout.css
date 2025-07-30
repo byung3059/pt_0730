@@ -50,6 +50,7 @@ body {
 
 .section {
     height: 100vh;
+    height: 100svh;
     background: var(--black-back-color);
     overflow: hidden;
 }
